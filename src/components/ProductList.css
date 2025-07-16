@@ -1,0 +1,487 @@
+/* Product List Container */
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.page-title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #171717;
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb-item {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.29;
+    color: #737373;
+}
+
+.breadcrumb-item.active {
+    color: #2E319E;
+}
+
+.breadcrumb-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #6366F1;
+    border-radius: 50%;
+}
+
+/* Search and Filter Bar */
+.search-filter-bar {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.search-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.search-field {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-field input {
+    width: 100%;
+    padding: 12px 16px;
+    padding-right: 40px;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #737373;
+    background-color: #FFFFFF;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-field input:focus {
+    border-color: #6366F1;
+}
+
+.search-field input::placeholder {
+    color: #737373;
+}
+
+.search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: #F8F9FA;
+}
+
+.filter-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Table Container */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+/* Table Header */
+.table-header {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background-color: transparent;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.table-cell {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    gap: 8px;
+}
+
+.cell-checkbox {
+    width: 48px;
+    justify-content: center;
+}
+
+.cell-image {
+    width: 72px;
+    justify-content: center;
+}
+
+.cell-sku {
+    width: 110px;
+}
+
+.cell-name {
+    flex: 1;
+    min-width: 200px;
+}
+
+.cell-category {
+    flex: 1;
+    min-width: 150px;
+}
+
+.cell-input-tax {
+    width: 110px;
+    justify-content: flex-end;
+}
+
+.cell-output-tax {
+    width: 110px;
+    justify-content: flex-end;
+}
+
+.cell-unit {
+    width: 110px;
+}
+
+.cell-units-per-box {
+    width: 110px;
+    justify-content: flex-end;
+}
+
+.cell-threshold {
+    width: 148px;
+    justify-content: flex-end;
+}
+
+.cell-updated {
+    flex: 1;
+    min-width: 160px;
+}
+
+.cell-actions {
+    width: 84px;
+    justify-content: center;
+}
+
+.header-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.29;
+    color: #737373;
+    text-align: left;
+}
+
+.cell-input-tax .header-text,
+.cell-output-tax .header-text {
+    text-align: right;
+}
+
+.cell-threshold .header-text {
+    text-align: right;
+}
+
+/* Table Body */
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.table-row:hover {
+    background-color: #F5F5F5;
+}
+
+.table-row.selected {
+    background-color: #F1F1FE;
+    border: 1px solid #E5E5E5;
+}
+
+.table-row .table-cell {
+    height: 44px;
+    padding: 12px 8px;
+}
+
+.cell-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #161413;
+}
+
+.cell-number {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #2E319E;
+    text-align: right;
+}
+
+/* Product Image */
+.product-image {
+    width: 46px;
+    height: 46px;
+    background-color: #F3F4F6;
+    background-image: url('/src/assets/product-placeholder.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+}
+
+/* Checkbox Styles */
+.checkbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #F5F5F5;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked+.checkmark {
+    background-color: #6366F1;
+    border-color: #6366F1;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked+.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Category Chips */
+.category-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #2E319E;
+    white-space: nowrap;
+}
+
+.category-lavender {
+    background-color: transparent;
+    border: 1px solid #664D7F;
+    color: #2E319E;
+}
+
+.category-pink {
+    background-color: transparent;
+    border: 1px solid #D72677;
+    color: #2E319E;
+}
+
+.category-emerald {
+    background-color: transparent;
+    border: 1px solid #10B981;
+    color: #2E319E;
+}
+
+.category-orange {
+    background-color: transparent;
+    border: 1px solid #F86528;
+    color: #2E319E;
+}
+
+.category-skyblue {
+    background-color: transparent;
+    border: 1px solid #2C9ECA;
+    color: #2E319E;
+}
+
+.category-mint {
+    background-color: transparent;
+    border: 1px solid #45A487;
+    color: #2E319E;
+}
+
+.category-gold {
+    background-color: transparent;
+    border: 1px solid #EAB308;
+    color: #2E319E;
+}
+
+/* Tax Chips */
+.tax-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #2E319E;
+    background-color: transparent;
+    border: 1px solid #664D7F;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Action Buttons */
+.action-button,
+.sort-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover,
+.sort-button:hover {
+    background-color: rgba(126, 126, 126, 0.04);
+}
+
+.action-button img,
+.sort-button img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .table-header,
+    .table-row {
+        min-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        padding: 16px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .search-field {
+        max-width: none;
+    }
+
+    .table-container {
+        font-size: 12px;
+    }
+
+    .cell-text,
+    .cell-number {
+        font-size: 12px;
+    }
+
+    .header-text {
+        font-size: 11px;
+    }
+}
